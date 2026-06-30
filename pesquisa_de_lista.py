@@ -1,10 +1,15 @@
 '''Criação de uma função para pesquisar um número em uma lista de números aleatórios'''
-import random
-x = 10
-y = 5
-lista_random = list(random.sample(range(x),y))
-''' sorted(lista_random) or lista_random.sort() '''
-lista_seq = sorted(lista_random) 
+from variaveis import gerar_nova_lista
+# importa do arquivo variaveis.py a função gerar_nova_lista
+lista_seq = gerar_nova_lista(20, 10)
+
+
+# função define valores base de baixo e alto, e enquanto baixo for menor ou igual a alto, 
+# calcula o meio da lista e compara o valor do meio com o número procurado. 
+# Se o valor do meio for igual ao número procurado, retorna o índice do meio. 
+# Se o valor do meio for maior que o número procurado, ajusta o valor de alto para meio - 1. 
+# Caso contrário, ajusta o valor de baixo para meio + 1. 
+# Se o número não for encontrado, retorna None. 
 
 def pesquisa_lista (lista, numero):
     baixo = 0
@@ -21,19 +26,7 @@ def pesquisa_lista (lista, numero):
 
     return None 
 
-'''print(pesquisa_lista(lista_seq,5000)) 
+print(pesquisa_lista(lista_seq,5)) 
 
-print(lista_seq)'''
+print(lista_seq)
 
-def sortear_lista(lista, numero):
-    tentativas = 0
-    while True:
-        tentativas += 1
-        indice = pesquisa_lista(lista, numero)
-        if indice is not None:
-            print(f'Número {numero} encontrado na posição {indice} da lista. Na tentativa {tentativas}')
-            return indice, tentativas, lista
-        
-
-print(sortear_lista(lista_seq, 5))
-    
