@@ -1,8 +1,9 @@
 '''Criação de uma função para pesquisar um número em uma lista de números aleatórios'''
 from variaveis import gerar_nova_lista
 # importa do arquivo variaveis.py a função gerar_nova_lista
-lista_seq = gerar_nova_lista(20, 10)
-
+x = 20
+y = 10
+lista_seq = gerar_nova_lista(x, y)
 
 # função define valores base de baixo e alto, e enquanto baixo for menor ou igual a alto, 
 # calcula o meio da lista e compara o valor do meio com o número procurado. 
