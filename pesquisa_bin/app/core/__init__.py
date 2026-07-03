@@ -1,30 +1,45 @@
 
 import logging as log
-from dataclasses import dataclass
 import random
+from typing import List
 
+
+log.basicConfig(level=log.DEBUG)
+log = log.getLogger(__name__)
+
+
+class gerador:
+    @staticmethod
+    def get_list(x,y: int, ordenado: bool = False) -> List[int]:
+        list = random.sample(range(x),y)
+        return sorted(list) if ordenado else list
+    
+    def get_list2(x,y: int, ordenado: bool = False) -> List[int]:
+        list = random.sample(range(x),y)
+        list = sorted(list) if ordenado else list
+        return list 
+
+    def logger(random_list):
+        log.debug(f"Random List: {random_list}")
+        return log.debug()
+    
+
+    
+    
 x = 20
 y = 10
 
-@dataclass  
-class gerador:
-    def sorted_list(x,y):
-        return sorted(random.sample(range(x),y))
-    
-    def random_list(x,y):
-        return random.sample(range(x),y)
 
-    def print_rlist(random_list):
-        print(random_list)
+#obj_logger = gerador.logger(gerador.sorted_list(x,y))
+#print(f'print {gerador.logger(obj_logger)}/n','f{gerador.sorted_list(x,y)}' )
+if __name__ == "__main__":
+    print(gerador.get_list(x,y,ordenado=True))
+    print(gerador.get_list(x,y,ordenado=False))
 
-    def repr(random_list):
-        return repr(f"Random List: {random_list}")
-    
-    def logger(random_list):
-        log.basicConfig(level=log.DEBUG)
-        log.debug(f"Random List: {random_list}")
-        return log.debug()
+    print(gerador.get_list2(x,y,ordenado=True))
+    print(gerador.get_list2(x,y,ordenado=False))
 
-print(gerador.sorted_list(x,y))
+resultado = gerador.get_list(x, y, ordenado=True)
 
-print(gerador.logger)
+log.debug(f"Lista gerada: {resultado}")
+print(resultado)
