@@ -3,7 +3,7 @@ import random
 x = 20
 y = 10
 
-def gerar_nova_lista(x,y):
+def gerar_lista(x,y):
     return sorted(random.sample(range(x),y));
 
 

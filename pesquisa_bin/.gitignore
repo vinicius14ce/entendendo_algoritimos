@@ -1,0 +1,13 @@
+# Ignora a pasta de cache do Python
+__pycache__/
+*.pyc
+
+# Ignora pastas de ambientes virtuais (boa prática)
+venv/
+.env
+
+# Ignora pastas do VS Code
+.vscode/
+
+# Ignora arquivos de sistema (se estiver no Mac)
+.DS_Store
