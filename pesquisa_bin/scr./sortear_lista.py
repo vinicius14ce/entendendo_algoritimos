@@ -4,8 +4,9 @@ from pesquisa_de_lista import pesquisa_lista as pl
 
 def sortear_lista(x, y, numero):
     tentativas = 0
-    lista = gerar_lista(x, y)
+    #lista = gerar_lista(x, y)
     while True:
+        lista = gerar_lista(x, y)
         tentativas += 1
         indice = pl(lista, numero)
         if indice is not None:
@@ -13,4 +14,4 @@ def sortear_lista(x, y, numero):
             return indice, tentativas, lista
         
 
-print(sortear_lista(20, 10 , 5))
+print(sortear_lista(6000, 3 , 5))
