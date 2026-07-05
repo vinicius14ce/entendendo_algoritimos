@@ -14,4 +14,4 @@ def sortear_lista(x, y, numero):
             return indice, tentativas, lista
         
 
-print(sortear_lista(6000, 3 , 5))
+print(sortear_lista(6000000, 3 , 5))
