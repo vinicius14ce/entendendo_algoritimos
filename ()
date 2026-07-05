@@ -1,0 +1,33 @@
+vinicius@vinicius-dev:~/projects/algoritimos$ git commit -m 'Estou testando o uso do decorator '@wraps' na criação de um wrapper (wrapper decora, atribui a uma função dado/retorno que não existia no seu escopo original.) - Foi inserido um codigo teste para verificar as implicações do decorator '@wraps' um um wrapper , verificar se só os metada dados eram mudados, ou todo o rash da função, enganando 100% o sistema. No caso, apenas os metadados são mudados, a função continua retornando "func.__code__: 'object wrapper'", mantendo o rastreamento correto do serviço, e respondendo como a função decorada, apenas para contexto de alto nivel.'
+error: pathspec 'wrapper", mantendo o rastreamento correto do serviço, e respondendo como a função decorada, apenas para contexto de alto nivel.' did not match any file(s) known to git
+vinicius@vinicius-dev:~/projects/algoritimos$ git status
+No ramo master
+Seu ramo está à frente de 'origin/master' por 2 submissões.
+  (use "git push" to publish your local commits)
+
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   pesquisa_bin/app/core/contador_operacaoes.py
+
+vinicius@vinicius-dev:~/projects/algoritimos$ git add .
+vinicius@vinicius-dev:~/projects/algoritimos$ git status
+No ramo master
+Seu ramo está à frente de 'origin/master' por 2 submissões.
+  (use "git push" to publish your local commits)
+
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   pesquisa_bin/app/core/contador_operacaoes.py
+
+vinicius@vinicius-dev:~/projects/algoritimos$ git commit -m 'Estou testando o uso do decorator '@wraps' na criação de um wrapper (wrapper decora, atribui a uma função dado/retorno que não existia no seu escopo original.) - Foi inserido um codigo teste para verificar as implicações do decorator '@wraps' um um wrapper , verificar se só os metada dados eram mudados, ou todo o rash da função, enganando 100% o sistema. No caso, apenas os metadados são mudados, a função continua retornando "func.__code__: 'object wrapper'", mantendo o rastreamento correto do serviço, e respondendo como a função decorada, apenas para contexto de alto nivel.'
+error: pathspec 'wrapper", mantendo o rastreamento correto do serviço, e respondendo como a função decorada, apenas para contexto de alto nivel.' did not match any file(s) known to git
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# No ramo master
+# Seu ramo está à frente de 'origin/master' por 2 submissões.
+#   (use "git push" to publish your local commits)
+#
+# Mudanças a serem submetidas:
+#	modified:   pesquisa_bin/app/core/contador_operacaoes.py
+

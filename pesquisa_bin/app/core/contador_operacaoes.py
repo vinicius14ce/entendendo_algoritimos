@@ -6,22 +6,57 @@
 # ou None se não for encontrado.
 
 from functools import wraps
-import inspect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 a, b = 5, 5
 
 def test_wrapper(func):
-    wraps(func)
-    def wrapper(*args, **kwargs):
-        wrapper.count += 1
-        return func(*args, **kwargs)
-    wrapper.count = 0
+    @wraps(func)
+    def wrapper(*args):
+        x = 2 *func(*args) #f"Called {func.__name__} with arguments: {args}"
+        return x
     return wrapper
 
+    
 @test_wrapper
 def contador(a, b):
     return a + b, a, b
 
 print(contador(a, b), contador.__name__)
-print(contador.__code__)
+#print(contador.__code__)
+
+#print(test_wrapper(contador(a, b)))
+
+
+#Testes de construção de decorators e wrappers, 
+# inserir retornos em funções.
+# e o decorator @wraps para manter metadados de funções que são decoradas.
+
