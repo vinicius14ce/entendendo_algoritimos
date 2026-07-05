@@ -7,41 +7,49 @@
 
 from functools import wraps
 
+class decorator:
+    def wrapper_contagem(self, func):
+        @wraps(func)
+        def wrapper(*args):
+            contagem = len(func(*args))
+            wrapper.contagem += 1
+            return func(*args)
+        wrapper.contagem = 0
+        return wrapper
+    
+    '''
+    def wrapper_contagem(func):
+        @wraps(func)
+        def wrapper(*args):
+            contagem = len(func(*args))
+            wrapper.contagem += 1
+            return func(*args)
+        wrapper.contagem = 0
+        return wrapper
+    '''
+
+x, y = 1, 2
+decorator = decorator()
+wrapper = decorator.wrapper_contagem()
+
+@wrapper
+def args(x, y): 
+    return(x + y)
+
+print(args(x, y), args.__name__)
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+'''
 
 a, b = 5, 5
 
 def test_wrapper(func):
     @wraps(func)
     def wrapper(*args):
-        x = 2 *func(*args) #f"Called {func.__name__} with arguments: {args}"
+        x = 2 * func(*args) #f"Called {func.__name__} with arguments: {args}"
         return x
     return wrapper
 
@@ -51,12 +59,12 @@ def contador(a, b):
     return a + b, a, b
 
 print(contador(a, b), contador.__name__)
-#print(contador.__code__)
-
-#print(test_wrapper(contador(a, b)))
+print(contador.__code__)
+print(test_wrapper(contador(a, b)))
 
 
 #Testes de construção de decorators e wrappers, 
 # inserir retornos em funções.
 # e o decorator @wraps para manter metadados de funções que são decoradas.
 
+'''
