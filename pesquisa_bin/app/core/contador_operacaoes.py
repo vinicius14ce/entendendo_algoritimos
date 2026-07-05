@@ -6,14 +6,13 @@
 # ou None se não for encontrado.
 
 from functools import wraps
-from logging import getLogger
+import inspect
 
-logger = getLogger(__name__)
 
 a, b = 5, 5
 
 def test_wrapper(func):
-    #@wraps(func)
+    wraps(func)
     def wrapper(*args, **kwargs):
         wrapper.count += 1
         return func(*args, **kwargs)
@@ -24,4 +23,5 @@ def test_wrapper(func):
 def contador(a, b):
     return a + b, a, b
 
-print(contador(a, b),logger.info(contador(a, b)))
+print(contador(a, b), contador.__name__)
+print(contador.__code__)
