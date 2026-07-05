@@ -23,23 +23,26 @@ class gerador:
     def logger(x,y: int) -> List[int]:
         return log.debug(gerador.get_list(x,y,order=False))
         
-   
-x, y = 20, 10
+''' 
 
-#print(gerador.logger(20,10))
  
 
 if __name__ == "__main__":
 
+    x, y = 20, 10
+    
     lista = gerador() 
     resultado = lista.get_list(x,y,order=True)
     print(resultado)
-    #print(gerador.get_list(x,y,ordenado=False))
+    print(gerador.get_list(x,y,order=False))
 
-    #print(gerador.get_list2(x,y,ordenado=True))
-    #print(gerador.get_list2(x,y,ordenado=False))
+    print(gerador.get_list2(x,y,order=True))
+    print(gerador.get_list2(x,y,order=False))
 
-    #resultado = gerador.get_list(x, y, ordenado=True)
+    resultado = gerador.get_list(x, y, order=True)
 
-    #log.debug(f"Lista gerada: {resultado}")
-    #print(resultado)
+    log.debug(f"Lista gerada: {resultado}")
+    print(resultado)
+
+    #print(gerador.logger(20,10))
+'''

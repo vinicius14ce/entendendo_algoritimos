@@ -27,6 +27,8 @@ def pesquisa_lista (lista, numero):
 
     return None 
 
+# impede o escape do código quando o arquivo é importado como módulo em outro arquivo,
+# e permite que o código seja executado apenas quando o arquivo é executado diretamente.
 
 if __name__ == "__main__":
     print(pesquisa_lista(lista_seq,5)) 
