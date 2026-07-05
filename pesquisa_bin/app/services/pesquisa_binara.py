@@ -23,8 +23,8 @@ class PesquisaBinaria:
 # condicional permite que o código seja executado apenas quando o arquivo é executado diretamente.
 if __name__ == "__main__":
 
-    pesquisa = PesquisaBinaria([1, 3, 35, 7, 90, 11, 13, 0, 17, 19])
-    print(pesquisa.pesquisa_lista(3))
+    pesquisa = PesquisaBinaria(sorted([1, 3, 35, 7, 90, 11, 13, 0, 17, 19]))
+    print(pesquisa.pesquisa_lista(17))
     print(pesquisa.lista)
 #-------------------------------------------------------------------------------------------------.
 
